@@ -9,10 +9,10 @@ let guardSlot=document.getElementById("guardSlot");
 let farmerSlot=document.getElementById("farmerSlot");
 
 let intro="<h3>Battle Master 2 </h3>";
-intro+="Recruit an Army to defeat the evil Orc horde .";
-intro+="You will need to recruit 15 soldiers to raid the Orc Stronghold but as you gather your army "; 
-intro+= "you will be constantly attack by the Orcs'.";
-intro+="If your guards, farmers or soldiers drop to 0 then you lose the game. Good luck Battle Master !!";
+intro+="Recruit an Army to defeat the evil orc horde .";
+intro+="You will need to recruit 15 soldiers to raid the orc Stronghold but as you gather your army "; 
+intro+= "you will be constantly attack by the orcs.";
+intro+="If your guards, farmers or soldiers drop to 0 then you will lose the game. Good luck Battle Master !!";
 
 info.innerHTML=intro;
 displayArmy();
@@ -185,7 +185,7 @@ function computerTurn()
     
     {
         startGuard-=2;  
-        feedback.innerHTML+="They attacked your castle at the dead of night. 2 Guards have been injured";
+        feedback.innerHTML+="The Orcs attacked your castle at the dead of night. 2 Guards have been injured";
 
     }
 
