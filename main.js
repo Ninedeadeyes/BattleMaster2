@@ -10,9 +10,10 @@ let farmerSlot=document.getElementById("farmerSlot");
 
 let intro="<h3>Battle Master 2 </h3>";
 intro+="Recruit an Army to defeat the evil orc horde .";
-intro+="You will need to recruit 15 soldiers to raid the orc Stronghold but as you gather your army "; 
-intro+= "you will be constantly attack by the orcs.";
-intro+="If your guards, farmers or soldiers drop to 0 then you will lose the game. Good luck Battle Master !!";
+intro+="You need to recruit 15 soldiers to raid the orc stronghold but as you gather your army, "; 
+intro+= " you will be constantly attack by the orcs.";
+intro+=" You need farmers for your food supply and guards to keep your stronghold safe.";
+intro+=" If any of your subjects drop to 0 then you will lose the game. Good luck Battle Master !!";
 
 info.innerHTML=intro;
 displayArmy();
@@ -79,8 +80,10 @@ function take(num)
             return;
         }
 
+        
+        let guard=Math.floor(Math.random()*2)+2;
 
-        startGuard+=num;  
+        startGuard+=guard;  
         
         if (startGuard>15)
         {
@@ -92,8 +95,7 @@ function take(num)
 
         else
         {
-            feedback.innerHTML="You Recruit 2 Guards. ";
-
+            feedback.innerHTML="You Recruit "+guard+ " Guards. ";
 
         }
             
@@ -104,12 +106,13 @@ function take(num)
     {
         if (startFarmer>=15)
         {
-            feedback.innerHTML="You have the maximum amount of Farmers.";
+            feedback.innerHTML="You have the maximum amount of Farmers. ";
             return;
         }
 
+        let farmer=Math.floor(Math.random()*4)+2;
 
-        startFarmer+=num; 
+        startFarmer+=farmer; 
         
         if (startFarmer>15)
         {
@@ -119,8 +122,9 @@ function take(num)
         }
 
         else
-        {
-            feedback.innerHTML="You Recruit 3 Farmers. ";
+        {   
+            farmer
+            feedback.innerHTML="You Recruit "+farmer+" Farmers. ";
 
 
         }
@@ -177,7 +181,7 @@ function computerTurn()
     
     {
         startFarmer-=4;  
-        feedback.innerHTML+="A sneaky Orc has poisoned your water supply. 4 Farmers has fallen sick ";
+        feedback.innerHTML+="A sneaky Orc has poisoned your water supply. 4 Farmers have fallen sick ";
 
     }
 
@@ -195,7 +199,7 @@ function computerTurn()
         startGuard-=1; 
         startFarmer-=1;
         startSoldier-=1;
-        feedback.innerHTML+="The Orc Shaman cursed your army with the spell 'Doom Maker'. 1xFarmer, 1xGuard and 1xSoldier are in a state of depression";
+        feedback.innerHTML+="The Orc Shaman cursed your army with the spell 'Doom Maker'. 1x Farmer, 1x Guard and 1x Soldier are in a state of depression";
 
     }
 

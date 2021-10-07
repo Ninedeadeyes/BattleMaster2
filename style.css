@@ -13,7 +13,7 @@ padding-top:0;
 margin:auto; position:300px;
 width: 500px;
 height:100%;
-background-color: grey;
+background-color: saddlebrown;
 }
 
 
@@ -34,7 +34,7 @@ background-color: grey;
     width:500px;
     display:flex;
     align-content:flex-start;
-    background-color: blue;
+    background-color: green;
 }
 
 #guardSlot {
@@ -58,6 +58,7 @@ h3 {
     text-align: center;
     margin:0;
     width:500px;
+    font-style:italic
 }
 
 .button{
@@ -70,7 +71,7 @@ h3 {
 
 .button1 
 {
-    background-color:blue;
+    background-color:green;
 
 }
 
