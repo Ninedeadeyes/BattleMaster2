@@ -195,7 +195,7 @@ function computerTurn()
         startGuard-=1; 
         startFarmer-=1;
         startSoldier-=1;
-        feedback.innerHTML+="The Orc Shaman cursed your Army with the spell 'Doom Maker'. 1xFarmer, 1xGuard and 1xSoldier are in a state of depression";
+        feedback.innerHTML+="The Orc Shaman cursed your army with the spell 'Doom Maker'. 1xFarmer, 1xGuard and 1xSoldier are in a state of depression";
 
     }
 
