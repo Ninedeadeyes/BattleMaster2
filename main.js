@@ -68,7 +68,7 @@ function take(num)
     if (num===1)
     {
         startSoldier+=num;  
-        feedback.innerHTML="You Recruit 1 Soldier. ";
+        feedback.innerHTML="You recruit 1 Soldier. ";
 
     }
 
@@ -95,7 +95,7 @@ function take(num)
 
         else
         {
-            feedback.innerHTML="You Recruit "+guard+ " Guards. ";
+            feedback.innerHTML="You recruit "+guard+ " Guards. ";
 
         }
             
@@ -124,7 +124,7 @@ function take(num)
         else
         {   
             farmer
-            feedback.innerHTML="You Recruit "+farmer+" Farmers. ";
+            feedback.innerHTML="You recruit "+farmer+" Farmers. ";
 
 
         }
@@ -172,7 +172,7 @@ function computerTurn()
         if (event===3)
     
     {   startFarmer-=2;
-        feedback.innerHTML+=" The Orcs raided farms. They kidnapped two of your farmers-";
+        feedback.innerHTML+=" The Orcs raided farms. They kidnapped two of your Farmers";
 
     }
 
