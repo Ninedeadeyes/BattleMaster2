@@ -134,7 +134,7 @@ function take(num)
 
     if (startSoldier>=15)
 {
-    feedback.innerHTML="You gather your army and at sunrise, you attack the Orcs Stronghold. After a brutal fight, ";
+    feedback.innerHTML="You gather your army and at sunrise, you attack the Orc Stronghold. After a brutal fight, ";
     feedback.innerHTML+="you stand tall and victorious. Congratulations you defeated the Orcs !!  ";
 
     displayArmy();
