@@ -165,7 +165,7 @@ function computerTurn()
     {
 
         startSoldier-=1;
-        feedback.innerHTML+="The Orcs attacked your stronghold but one of your soldier was injured.";
+        feedback.innerHTML+="The Orcs attacked your stronghold and one of your soldier was injured.";
 
     }
 
