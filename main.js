@@ -160,7 +160,7 @@ function computerTurn()
 
     if (startGuard<=2)
     {
-        event=2;
+        event=6;
     }
 
     if (event===1)
