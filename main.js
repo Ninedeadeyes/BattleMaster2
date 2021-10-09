@@ -9,7 +9,7 @@ let guardSlot=document.getElementById("guardSlot");
 let farmerSlot=document.getElementById("farmerSlot");
 
 let intro="<h3>Battle Master 2 </h3>";
-intro+="Recruit an Army to defeat the evil orc horde .";
+intro+="Recruit an army to defeat the evil orc horde .";
 intro+="You need to recruit 15 soldiers to raid the orc stronghold but as you gather your army, "; 
 intro+= " you will constantly be attacked.";
 intro+=" You need farmers for your food supply and guards to keep your stronghold safe.";
