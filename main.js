@@ -153,6 +153,16 @@ function computerTurn()
 
     event=Math.floor(Math.random()*8)+1;
 
+    if (startFarmer<=4)
+    {
+        event=4;
+    }
+
+    if (startGuard<=2)
+    {
+        event=2;
+    }
+
     if (event===1)
     
     {
