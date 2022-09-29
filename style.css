@@ -8,10 +8,13 @@ background-color:grey;
 
 #maincontainer 
 {   
-margin:auto; 
-max-width: 500px;
+top:0px;
+padding-top:0;
+margin:auto; position:300px;
+width: 500px;
 height:100%;
 background-color: saddlebrown;
+border:5px black inset;
 }
 
 
@@ -46,17 +49,21 @@ background-color: saddlebrown;
 }
 
 #info, #feedback{
-    border:5px black inset;
+    border:2px black inset;
     background-color:white;
-    width: 495px;
+    width: 497px;
     min-height: 120px;
+    font-family: monospace;
 }
 
 h3 {
     text-align: center;
     margin:0;
     width:500px;
-    font-style:italic
+    font-style:oblique;
+    text-decoration: underline;
+    font-family: monospace;
+
 }
 
 .button{
@@ -82,5 +89,13 @@ h3 {
 .button3 
 {
     background-color:blueviolet;
+
+}
+
+#music{
+    top:210px;
+    left:80px;
+    margin:auto; 
+    width: 300px;
 
 }
