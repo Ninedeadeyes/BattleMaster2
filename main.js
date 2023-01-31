@@ -1,4 +1,3 @@
-
 let startSoldier=5;
 let startFarmer=5;
 let startGuard=5;
@@ -24,60 +23,46 @@ function displayArmy()
 
 {
     soldierSlot.innerHTML="";                           
-    for (let i=0; i< startSoldier; i++)                     
-    {
+    for (let i=0; i< startSoldier; i++){
         let counter="<div class='counter'></div>";
         soldierSlot.innerHTML+=counter;
-
     }
 
     guardSlot.innerHTML="";                           
-    for (let i=0; i< startGuard; i++)                     
-    {
+    for (let i=0; i< startGuard; i++) {
         let counter="<div class='counter'></div>";
         guardSlot.innerHTML+=counter;
-
     }
 
     farmerSlot.innerHTML="";                           
-    for (let i=0; i< startFarmer; i++)                     
-    {
+    for (let i=0; i< startFarmer; i++){
         let counter="<div class='counter'></div>";
         farmerSlot.innerHTML+=counter;
-
     }
 
 }
 
-function take(num)
+function take(num){
 
-{
-
-    if (startGuard <=0 || startFarmer<=0|| startSoldier<=0 )
-    {
+    if (startGuard <=0 || startFarmer<=0|| startSoldier<=0 ){
         feedback.innerHTML= bad +"RIP, Oh brave Battle Master (Refresh to play again)";
         return;
-
     }
 
-    if (startSoldier>=15)
-    {
+    if (startSoldier>=15){
         feedback.innerHTML=good;
         displayArmy();
         return;
     }
 
-    if (num===1)
-    {
+    if (num===1){
         startSoldier+=num;  
         feedback.innerHTML="You recruit 1 Soldier. ";
-
     }
 
-    if (num===2)
-    {
-        if (startGuard>=15)
-        {
+    if (num===2){
+        
+        if (startGuard>=15){
             feedback.innerHTML="You have the maximum amount of Guards.";
             return;
         }
@@ -86,25 +71,22 @@ function take(num)
 
         startGuard+=guard;  
         
-        if (startGuard>15)
-        {
+        if (startGuard>15){
             startGuard=15
 
             feedback.innerHTML="You have reach maximum amount of Guards in your Barrack.";
         }
 
-        else
-        {
+        else{
             feedback.innerHTML="You recruit "+guard+ " Guards. ";
 
         }
             
     }
 
-    if (num===3)
-    {
-        if (startFarmer>=15)
-        {
+    if (num===3){
+
+        if (startFarmer>=15){
             feedback.innerHTML="You have the maximum amount of Farmers. ";
             return;
         }
@@ -113,123 +95,86 @@ function take(num)
 
         startFarmer+=farmer; 
         
-        if (startFarmer>15)
-        {
+        if (startFarmer>15){
             startFarmer=15
-
             feedback.innerHTML="You have reached the maximum amount of Farmers on your land.";
         }
 
-        else
-        {   
+        else{   
             farmer
             feedback.innerHTML="You recruit "+farmer+" Farmers. ";
         }
 
     }
 
-
-    if (startSoldier>=15)
-{
+    if (startSoldier>=15){
     feedback.innerHTML="You gather your army and at sunrise, you attack the Orc Stronghold. After a brutal fight, ";
     feedback.innerHTML+="you stand tall and victorious. Congratulations you have defeated the dreaded Orcs !!  ";
     good="You gather your army and at sunrise, you attack the Orc Stronghold. After a brutal fight,";
     good+="you stand tall and victorious. Congratulations you have defeated the dreaded Orcs !!";
-
-
     displayArmy();
     return;
-}
+    }
+
     displayArmy(); 
     computerTurn()
 }    
 
-function computerTurn()
-{
+function computerTurn(){
     let event;
-
     event=Math.floor(Math.random()*8)+1;
 
-    if (event===1)
-    
-    {
+    if (event===1){
         feedback.innerHTML+="The Orcs attacked your stronghold but you managed to repel the horde without any casualty.";
-
     }
 
-    if (event===2)
-    
-    {
+    if (event===2){
 
         startSoldier-=1;
         feedback.innerHTML+="The Orcs attacked your stronghold and one of your soldier was injured.";
-
     }
 
-        if (event===3)
-    
-    {   startFarmer-=2;
+        if (event===3){ 
+        startFarmer-=2;
         feedback.innerHTML+=" The Orcs raided farms. They kidnapped two of your Farmers";
-
     }
 
-
-    if (event===4 || event===5)
-    
-    {
+    if (event===4 || event===5){
         startFarmer-=4;  
         feedback.innerHTML+="A sneaky Orc has poisoned your water supply. 4 Farmers have fallen sick ";
-
     }
 
-    if (event===6)
-    
-    {
+    if (event===6){
         startGuard-=2;  
         feedback.innerHTML+="The Orcs attacked your castle at the dead of night. 2 Guards have been injured";
-
     }
 
-    if (event===7)
-    
-    {
+    if (event===7){
         startGuard-=1; 
         startFarmer-=1;
         startSoldier-=1;
         feedback.innerHTML+="The Orc Shaman cursed your army with the spell 'Doom Maker'. 1x Farmer, 1x Guard and 1x Soldier are in a state of depression";
-
     }
 
-    if (event===8)
-    
-    {
+    if (event===8){
         startFarmer+=1;
         feedback.innerHTML+="One of your farmer was able to escape from the Orc Stronghold";
-
     }
 
-
-    if ( startSoldier<=0 )
-    {
+    if ( startSoldier<=0 ){
         feedback.innerHTML+=". The Orc army smashed your army.  You have been defeated !!";  
         bad="The Orc army smashed your army. You have been defeated !! ";
     }
 
-    if (startFarmer<=0)
-    {
+    if (startFarmer<=0){
         feedback.innerHTML+=". The Orc army destroyed your food supply.  You have been defeated !!";
         bad="The Orc army destroyed your food supply. You have been defeated !! ";
     }
 
-    if (startGuard <=0)
-    {
+    if (startGuard <=0){
         feedback.innerHTML+=". The Orc army has ransacked your stronghold.  You have been defeated !!";
         bad="The Orc army has ransacked your stronghold. You have been defeated !! ";
     }
 
-
     displayArmy();
-
-
-
 }
